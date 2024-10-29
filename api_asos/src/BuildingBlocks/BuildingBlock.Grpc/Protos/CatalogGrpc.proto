@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+option csharp_namespace = "BuildingBlock.Grpc.Protos";
+
+service CatalogGrpc {
+  rpc GetProduct (GetProductRequest) returns (GetProductReply);
+}
+
+message GetProductRequest {
+  string id = 1;
+}
+
+message GetProductReply {
+  bool Success = 1;
+  string ErrMessage = 2;
+  string ProductId = 3;
+  string ProductItemId = 4;
+  string VariationId = 5;
+  string Slug = 6;
+  string Name = 7;
+  string Description = 8;
+  string Category = 9;
+  string Brand = 10;
+  string Size = 11;
+  string Color = 12;
+  double OriginalPrice = 13;
+  double SalePrice = 14;
+  double Stock = 15;
+  bool IsSale = 16;
+  int32 QtyInStock = 17;
+  int32 QtyDisplay = 18;
+  string Image = 19;
+}
